@@ -72,7 +72,8 @@ HTMLWidgets.widget({
                     'background-color': 'data(color)',
                     'width': 'data(width)',
                     'height': 'data(height)',
-                    'font-size': '36px',
+                    'font-size': 'data(nodeLabelFontSize)',
+                    'min-zoomed-font-size': 'data(nodeLabelMinZoomedFontSize)'
                     'min-zoomed-font-size': '7px'
                 })
                 .selector('edge')
