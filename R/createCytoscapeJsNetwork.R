@@ -44,6 +44,7 @@
 createCytoscapeJsNetwork <- function(nodeData, edgeData,
                                      nodeColor="#888888", nodeShape="ellipse",
                                      nodeHeight="70", nodeWidth="70", nodeLabelColor="#FFFFFF",
+                                     nodeLabelFontSize='36px',nodeLabelMinZoomedFontSize='7px',
                                      edgeColor="#888888", edgeSourceShape="none",
                                      edgeTargetShape="triangle", edgeWidth=2, nodeHref="") {
 
@@ -82,7 +83,15 @@ createCytoscapeJsNetwork <- function(nodeData, edgeData,
     if(!("nodeLabelColor" %in% colnames(nodeData))) {
       nodeData$nodeLabelColor <- rep(nodeLabelColor, nrow(nodeData))
     }
-  
+	
+    if(!("nodeLabelFontSize" %in% colnames(nodeData))) {
+      nodeData$nodeLabelFontSize <- rep(nodeLabelFontSize, nrow(nodeData))
+    }
+	
+    if(!("nodeLabelMinZoomedFontSize" %in% colnames(nodeData))) {
+      nodeData$nodeLabelMinZoomedFontSize <- rep(nodeLabelMinZoomedFontSize, nrow(nodeData))
+    }
+     
     rownames(nodeData) <- NULL
     nodeEntries <- apply(nodeData,1,function(x){
         list(data=as.list(x))
