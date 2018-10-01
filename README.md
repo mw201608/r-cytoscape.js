@@ -9,7 +9,7 @@ This package is currently not on CRAN, but you can install it from GitHub via `d
 
 ```r
 library("devtools");
-devtools::install_github("cytoscape/r-cytoscape.js");
+devtools::install_github("mw201608/r-cytoscape.js");
 ```
 
 ## Sample network
