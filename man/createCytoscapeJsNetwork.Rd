@@ -6,7 +6,8 @@
 \usage{
 createCytoscapeJsNetwork(nodeData, edgeData, nodeColor = "#888888",
   nodeShape = "ellipse", nodeHeight = "70", nodeWidth = "70",
-  nodeLabelColor = "#FFFFFF", edgeColor = "#888888",
+  nodeLabelColor = "#FFFFFF", nodeLabelFontSize='36px',
+  nodeLabelMinZoomedFontSize='7px', edgeColor = "#888888",
   edgeSourceShape = "none", edgeTargetShape = "triangle", edgeWidth = 2,
   nodeHref = "")
 }
@@ -27,6 +28,10 @@ to 'preset' then the user-specified locations will be used.}
 \item{nodeWidth}{node width (default: 30)}
 
 \item{nodeLabelColor}{node label color (default: #FFFFFF)}
+
+\item{nodeLabelFontSize}{node label font size}
+
+\item{nodeLabelMinZoomedFontSize}{node label min-zoomed font size}
 
 \item{edgeColor}{a hex color for edges (default: #666666)}
 
